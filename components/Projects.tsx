@@ -44,7 +44,7 @@ function Projects({ projectLists }: Props) {
                 <div className='flex space-x-2 my-2'>
                   {
                     project.technologies.map((tech) => (
-                      <img className='h-10 w-10 rounded-full object-cover' src={urlFor(tech.image).url()} alt="Tech" />
+                      <img key={tech._id} className='h-10 w-10 rounded-full object-cover' src={urlFor(tech.image).url()} alt="Tech" />
                     ))
                   }
                 </div>
