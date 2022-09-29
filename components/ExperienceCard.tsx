@@ -8,7 +8,7 @@ type Props = {
 
 export default function ExperienceCard({experience}: Props) {
   return (
-    <article className='flex flex-col  rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden '>
+    <article className='flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 transition-opacity duration-200 overflow-hidden '>
       <motion.img
       initial={{
         y: -100,
@@ -17,7 +17,7 @@ export default function ExperienceCard({experience}: Props) {
       transition={{duration: 1.2}}
       whileInView={{opacity: 1, y: 0}}
       viewport={{once: true}}
-      className='w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center'
+        className='w-32 h-32 rounded-full xl:w-[200px] xl:h-[200px] object-cover object-center pointer-events-none'
       src={urlFor(experience.companyImage)?.url()} alt="companylogo" />
       <div className='px-0 md:px-10'>
         <h4 className='text-4xl font-light'>{experience.jobTitle}</h4>
@@ -25,7 +25,7 @@ export default function ExperienceCard({experience}: Props) {
         <div className='flex space-x-2 my-2'>
             {
               experience.technologies.map((tech) => (
-                <img key={tech._id} className='h-10 w-10 rounded-full' src={urlFor(tech.image).url()} alt={tech.title} />
+                <img key={tech._id} className='h-10 w-10 rounded-full pointer-events-none' src={urlFor(tech.image).url()} alt={tech.title} />
            
               ))
             }

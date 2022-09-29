@@ -34,9 +34,7 @@ const Home = ({
       <section id="hero" className='snap-center'>
         <Hero pageInfo={pageInfo}/>
       </section>
-      <section id='about' className='snap-center'>
-        <About pageInfo={pageInfo} />
-      </section>
+      
       <section id="experience" className='snap-center'>
         <ExperienceWork experiences={experiences} />
       </section>
@@ -45,6 +43,9 @@ const Home = ({
       </section>
       <section id="projects" className='snap-center'>
         <Projects projectLists={projects} />
+      </section>
+      <section id='about' className='snap-center'>
+        <About pageInfo={pageInfo} />
       </section>
       {/* Contact Me */}
       <Link href="#hero">
