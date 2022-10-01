@@ -5,7 +5,6 @@ import { Experience } from '../typings'
 type Props = {
   experiences: Experience[]
 }
-
 export default function WorkExperience({experiences}: Props) {
   const [width, setWidth] = useState(0)
   const carouselRef:any = useRef();
