@@ -2,7 +2,7 @@ import { Experience, IcV, PageInfo, Project, Skill, Social } from "../typings";
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL
 export const fetchSkills =async () => {
-  const res = await fetch(`${BASE_URL}/api/getSkills`);
+  const res = await fetch(`${BASE_URL}api/getSkills`);
 
   const data = await res.json();
   const skills: Skill[] = data.skills
@@ -11,7 +11,7 @@ export const fetchSkills =async () => {
 };
 
 export const fetchPageInfo = async () => {
-  const res = await fetch(`${BASE_URL}/api/getPageInfo`);
+  const res = await fetch(`${BASE_URL}api/getPageInfo`);
 
   const data = await res.json();
   const pageInfo: PageInfo = data.pageInfo;
@@ -29,7 +29,7 @@ export const fetchSocials = async () => {
 }
 
 export const fetchProjects =async () => {
-  const res = await fetch(`${BASE_URL}/api/getProjects`);
+  const res = await fetch(`${BASE_URL}api/getProjects`);
 
   const data = await res.json();
   const projects: Project[] = data.projects;
@@ -38,7 +38,7 @@ export const fetchProjects =async () => {
 }
 
 export const fetchExperiences = async () => {
-   const res = await fetch(`${BASE_URL}/api/getExperience`);
+   const res = await fetch(`${BASE_URL}api/getExperience`);
 
    const data = await res.json();
    const experiences: Experience[] = data.experiences;
@@ -47,7 +47,7 @@ export const fetchExperiences = async () => {
 }
 
 export const fetchCv =async () => {
-  const res = await fetch(`${BASE_URL}/api/getCv`);
+  const res = await fetch(`${BASE_URL}api/getCv`);
   const data = await res.json();
   const cv: IcV = data.cv
 
