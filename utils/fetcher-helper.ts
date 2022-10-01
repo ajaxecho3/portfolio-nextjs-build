@@ -1,6 +1,8 @@
 import { Experience, IcV, PageInfo, Project, Skill, Social } from "../typings";
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL
+
+const dev = process.env.NODE_ENV !== "production";
+const BASE_URL = dev ? process.env.NEXT_PUBLIC_BASE_URL : process.env.VERCEL_URL;
 export const fetchSkills =async () => {
   const res = await fetch(`${BASE_URL}api/getSkills`);
 
