@@ -1,12 +1,16 @@
 import React from 'react'
 import { SocialIcon  } from 'react-social-icons'
 import { motion } from 'framer-motion'
-import { Social } from '../typings'
+import {  IcV, Social } from '../typings'
+import Link from 'next/link'
 type Props = {
   socials: Social[]
+  exportCv: IcV
 }
 
-function Header({socials}: Props) {
+function Header({ socials, exportCv }: Props) {
+  
+  console.log(exportCv)
   return (
     <header className='sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center'>
       <motion.div
@@ -51,8 +55,11 @@ function Header({socials}: Props) {
           duration: 1.5,
         }}
         className='flex flex-row items-center'>
-        <SocialIcon network='cv' url='ajaxecho3@gmail.com' fgColor='gray' bgColor='transparent' />
-        <p className='uppercase hidden md:inline-flex text-sm to-gray-400'>Download CV</p>
+        <Link href={`${exportCv}`} target="_blank" rel="noreferrer">
+          <span className='rounded-full border  font-bold cursor-pointer p-2 border-[#F7AB0A] uppercase hidden md:inline-flex text-sm text-[#F7AB0A] animate-pulse'>
+            Curriculum vitae
+          </span>
+        </Link>
       </motion.div>
     </header>
   )

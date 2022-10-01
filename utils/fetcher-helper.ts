@@ -1,4 +1,4 @@
-import { Experience, PageInfo, Project, Skill, Social } from "../typings";
+import { Experience, IcV, PageInfo, Project, Skill, Social } from "../typings";
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL
 export const fetchSkills =async () => {
@@ -44,4 +44,12 @@ export const fetchExperiences = async () => {
    const experiences: Experience[] = data.experiences;
 
    return experiences;
+}
+
+export const fetchCv =async () => {
+  const res = await fetch(`${BASE_URL}/api/getCv`);
+  const data = await res.json();
+  const cv: IcV = data.cv
+
+  return cv
 }

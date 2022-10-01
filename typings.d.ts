@@ -12,7 +12,19 @@ interface Image {
     _type: "reference";
   }
 }
+export interface Cv {
+  _type: "file";
+  asset: {
+    _ref: string;
+    _type: "reference";
+  };
+}
 
+export interface IcV {
+  result: {
+    cv: string;
+  };
+}
 export interface PageInfo extends SanityBody {
   _type: "pageInfo";
   address: string;
@@ -23,6 +35,7 @@ export interface PageInfo extends SanityBody {
   name: string;
   phoneNumber: string;
   profilePic: Image;
+  cv: Cv;
 }
 
 export interface Technology extends SanityBody {
@@ -46,6 +59,7 @@ export interface Project extends SanityBody {
   linkToBuild: string;
   summary: string;
   technologies: Technology[];
+  projectStatus: string;
 }
 
 export interface Experience extends SanityBody {
