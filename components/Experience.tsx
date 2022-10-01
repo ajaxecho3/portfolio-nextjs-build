@@ -37,14 +37,6 @@ export default function WorkExperience({experiences}: Props) {
           }
         </motion.div>
       </motion.div>
-      {/* <div className='w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory'>
-        {
-          experiences?.map((experience) => (
-            <ExperienceCard key={experience._id} experience={experience} />
-          ))
-        }
-        
-      </div> */}
     </motion.div>
   )
 }

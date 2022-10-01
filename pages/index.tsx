@@ -1,7 +1,5 @@
-import type { GetServerSideProps, GetStaticProps } from 'next'
+import type { GetStaticProps } from 'next'
 import Head from 'next/head'
-import Link from 'next/link'
-import { type } from 'os'
 import About from '../components/About'
 import ExperienceWork from '../components/Experience'
 import Header from '../components/Header'
@@ -49,14 +47,7 @@ const Home = ({
       <section id='about' className='snap-center'>
         <About pageInfo={pageInfo} />
       </section>
-      {/* Contact Me */}
-      {/* <Link href="#hero">
-        <footer className='sticky bottom-5 w-full cursor-pointer'>
-          <div className='flex items-center justify-center'>
-            <img src='./me.jpg' alt="logo" className='h-10 w-10 rounded-full filter grayscale hover:grayscale-0' />
-          </div>
-        </footer>
-      </Link> */}
+    
     </div>
   )
 }

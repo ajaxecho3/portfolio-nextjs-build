@@ -57,7 +57,7 @@ function Header({ socials, exportCv }: Props) {
         className='flex flex-row items-center'>
         <Link href={`${exportCv}`} target="_blank" rel="noreferrer">
           <span className='rounded-full border  font-bold cursor-pointer p-2 border-[#F7AB0A] uppercase hidden md:inline-flex text-sm text-[#F7AB0A] animate-pulse'>
-            Curriculum vitae
+            Download my Curriculum vitae
           </span>
         </Link>
       </motion.div>
